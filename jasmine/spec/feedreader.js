@@ -34,7 +34,7 @@ $(function() {
          it('have URL', function() {
             allFeeds.forEach(function(feed) {
                 expect(feed.url).toBeDefined();
-                expect(allFeeds.length).not.toBe(0);
+                expect(feed.url.length).not.toBe(0);
             });
          });
 
@@ -43,6 +43,7 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+
     });
 
 
