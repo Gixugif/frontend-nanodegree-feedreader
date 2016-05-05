@@ -75,6 +75,14 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+        it('toggles hidden', function() {
+            $('.menu-icon-link').trigger('click');
+            expect($('.slide-menu').parents('.menu-hidden').length == 1).toBe(false);
+
+            $('.menu-icon-link').trigger('click');
+            expect($('.slide-menu').parents('.menu-hidden').length == 1).toBe(true);
+        });
+
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
