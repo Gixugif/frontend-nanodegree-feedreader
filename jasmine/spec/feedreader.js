@@ -104,18 +104,36 @@ $(function() {
 
             var entry = document.getElementsByClassName('entry');
             var feed = document.getElementsByClassName('feed');
-            console.log($('.feed').find('.entry'));
 
             expect($('.feed').find('.entry').length > 0).toBe(true);
             done();
-        })
+        });
+    });
 
-    /* TODO: Write a new test suite named "New Feed Selection"
+    /* TODO: Write a new test suite named "New Feed Selection"*/
+    describe('New Feed Selection',function() {
+        var entries,
+            changedEntries;
+
+        beforeEach(function(done) {
+            loadFeed(1,function() {
+                entries = $('.feed').html();
+                done();
+            });
+        });
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+         it('changes content',function(done) {
+
+            loadFeed(0,function() {
+                expect($('.feed').html()).not.toEqual(entries);;
+                done();
+            });
+
+         });
     });
 
 }());
