@@ -60,7 +60,14 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
+        it('is hidden', function() {
+            var hidden = false;
+            if($('.slide-menu').parents('.menu-hidden').length == 1) {
+                hidden = true;
+            }
 
+            expect(hidden).toBe(true);
+        });
 
 
          /* TODO: Write a test that ensures the menu changes
