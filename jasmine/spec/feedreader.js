@@ -30,7 +30,7 @@ $(function() {
 
     describe('The menu',function () {
 
-        it('is hidden', function() {
+        it('is hidden by default', function() {
             var hidden = false;
             if($('.slide-menu').parents('.menu-hidden').length == 1) {
                 hidden = true;
@@ -75,6 +75,7 @@ $(function() {
             changedEntries;
 
         beforeEach(function(done) {
+            //grab the current entries then load new ones
             loadFeed(1,function() {
                 entries = $('.feed').html();
                 done();
@@ -84,6 +85,7 @@ $(function() {
          it('changes content',function(done) {
 
             loadFeed(0,function() {
+                // then we compare the old ones to the new ones
                 expect($('.feed').html()).not.toEqual(entries);
                 done();
             });
