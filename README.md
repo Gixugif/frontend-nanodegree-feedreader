@@ -1,6 +1,6 @@
 Feedreader
 ===============================
-
+A Simple RSS Reader
 
 Synopsis
 --------------
