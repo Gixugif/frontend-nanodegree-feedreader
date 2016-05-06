@@ -84,7 +84,7 @@ $(function() {
          it('changes content',function(done) {
 
             loadFeed(0,function() {
-                expect($('.feed').html()).not.toEqual(entries);;
+                expect($('.feed').html()).not.toEqual(entries);
                 done();
             });
 
