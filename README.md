@@ -16,3 +16,8 @@ Jasmine/spec/feedreader.js.
 
 Features
 ---------------
+- Displays links from selected RSS feed
+- Can change to several different feeds
+- Feed data collected asynchronously
+- Menu that can be hidden/ showed
+- Tests for validating features built with Jasmine
