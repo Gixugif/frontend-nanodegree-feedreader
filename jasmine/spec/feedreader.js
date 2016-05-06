@@ -76,11 +76,14 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
         it('toggles hidden', function() {
-            $('.menu-icon-link').trigger('click');
-            expect($('.slide-menu').parents('.menu-hidden').length == 1).toBe(false);
+            var isHidden = $('.slide-menu').parents('.menu-hidden').length == 1;
+            // we check the current status so that the test will work no matter the default state
 
             $('.menu-icon-link').trigger('click');
-            expect($('.slide-menu').parents('.menu-hidden').length == 1).toBe(true);
+            expect($('.slide-menu').parents('.menu-hidden').length == 1).not.toBe(isHidden);
+
+            $('.menu-icon-link').trigger('click');
+            expect($('.slide-menu').parents('.menu-hidden').length == 1).toBe(isHidden);
         });
 
     });
