@@ -9,11 +9,15 @@ $(function () {
     describe('RSS Feeds', function () {
 
         it('are defined', function () {
+            // Makes sure allFeeds has at least one RSS feed listed
+
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
 
         it('have URL', function () {
+            // Make sure each feed in allFeeds has a non-empty URL
+
             allFeeds.forEach(function (feed) {
                 expect(feed.url).toBeDefined();
                 expect(feed.url.length).not.toBe(0);
@@ -21,6 +25,8 @@ $(function () {
         });
 
         it('have name', function () {
+            // Make sure each feed in allFeeds has a non-empty name
+
             allFeeds.forEach(function (feed) {
                 expect(feed.name).toBeDefined();
                 expect(feed.name.length).not.toBe(0);
