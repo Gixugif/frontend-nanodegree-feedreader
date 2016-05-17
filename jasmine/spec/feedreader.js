@@ -72,6 +72,8 @@ $(function () {
         });
 
         it('has at least one entry', function (done) {
+            // Make sure, when loaded, that there is at least one
+            // entry in the news feed
 
             var entry = document.getElementsByClassName('entry');
             var feed = document.getElementsByClassName('feed');
