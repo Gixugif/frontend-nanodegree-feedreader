@@ -96,6 +96,8 @@ $(function () {
         });
 
         it('changes content', function (done) {
+            // Make sure that when you select a new feed that the new feed
+            // actually changes its content
 
             loadFeed(0, function () {
                 // then we compare the old ones to the new ones
