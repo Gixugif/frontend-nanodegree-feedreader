@@ -37,6 +37,8 @@ $(function () {
     describe('The menu', function () {
 
         it('is hidden by default', function () {
+            // Make sure the menu starts out hidden
+
             var hidden = false;
             if ($('.slide-menu').parents('.menu-hidden').length == 1) {
                 hidden = true;
@@ -46,6 +48,9 @@ $(function () {
         });
 
         it('toggles hidden', function () {
+            // Make sure when the menu button is clicked it toggles the menu's
+            // hidden state
+
             var isHidden = $('.slide-menu').parents('.menu-hidden').length == 1;
             // we check the current status so that the test will work no matter the default state
 
